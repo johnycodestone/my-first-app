@@ -2,8 +2,9 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
-    align-items: center;  /* For verticaly center alignment */
+    justify-content: center;
+    align-items: center;
+    /* For verticaly center alignment */
 }
 
 #heroMain {
@@ -14,8 +15,8 @@
 }
 
 #heroImage {
-    width: 40vmin;
-    height: 50vmin;
+    width: 60vmin;
+    height: 70vmin;
     border-radius: 25px;
     border: none;
 }
@@ -37,5 +38,24 @@
 }
 
 #heroBtn {
+    margin-top: 2rem;
     width: fit-content;
+}
+
+@media (max-width: 800px) {
+    #heroMain {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .heroText h1 {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .heroText p {
+        font-size: 1rem;
+    }
 }

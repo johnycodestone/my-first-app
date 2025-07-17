@@ -3,9 +3,11 @@ import "./App.css";
 import "./Button.css";
 import "./Navbar.css";
 import "./HeroSection.css";
+import "./Footer.css";
 import Button from "./Components/Button";
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
+import Footer from "./Components/Footer";
 
 function App() {
   const name = "Muhammad Waqar Saleem";
@@ -15,9 +17,7 @@ function App() {
       <header className="App-header">
         <Navbar/>
         <HeroSection/>
-        {/* <h1>{name}: {profession}</h1> 
-        <Button/> */}
-        {/* <img src="waqar-saleem.jpg" alt="Waqar_Saleem_Profile_Picture"/> */}
+        <Footer/>
       </header>
     </div>
   );
