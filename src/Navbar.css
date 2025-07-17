@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-color: darkslategray;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+#headerMenu {
+    padding: 1.25rem 2rem 1.25rem 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbarLogo {
+    height: 20vmin;
+    width: 20vmin;
+}
+
+#headerMenuList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    width: 60vmin;
+    list-style: none;
+
+    font-size: 1.25rem;
+    color: white;
+}
+
+#headerMenuList li {
+    cursor: pointer;
+    position: relative;  /* Needed so ::after is positioned relative to li, will then take it as a reference at all times */
+    transition: color 0.3s ease; 
+}
+
+#headerMenuList li::after { /* ::after ::before are pseudo elements i.e. small html elements that can be added directly through our CSS */
+    content: "";  /* We are creating a blank block of 2px height and 0px width which we will later make 100% widht of parent:li */
+    position: absolute;  /* Makes sure that the positions we are defining are implemented at all times */
+    bottom: -4px;   /* Moves the line just below the text. This adds space between text and underline so that they never overlap. Without this also, undeline will be exactly beneath the text. */
+    left: 0;
+    height: 2px;
+    background-color: lightblue;
+    width: 0; /* Hidden initially */
+    transition: width 0.3s ease;
+    transform-origin: left;  /* Begins from left */
+}
+
+#headerMenuList li:hover {
+    color: lightblue;
+}
+
+#headerMenuList li:hover::after {
+    width: 100%;  /* Expands the underline from left to right */
+}
+
