@@ -1,14 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+#footer-box {
+    padding: 1.5rem 3rem;
+    margin: 0;
+    background-color: darkcyan;
+    width: 100%;
 }
 
 #footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
-    padding: 1.5rem 1rem;
+
     background-color: darkcyan;
 }
 

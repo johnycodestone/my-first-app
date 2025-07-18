@@ -1,4 +1,6 @@
 #heroSection {
+    box-sizing: border-box;
+    margin: 0;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -10,6 +12,8 @@
 #heroMain {
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+    margin: 0;
     padding-bottom: 2rem;
     gap: 2rem;
 }
